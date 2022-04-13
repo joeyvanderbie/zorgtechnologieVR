@@ -1,3 +1,88 @@
+
+   
 <html>
-  <body>still empty inside</body>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,user-scalable=no,maximum-scale=1">
+    <title>Examples • Vive</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+<!--     <script src="../bundle.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r134/examples/js/deprecated/Geometry.js"></script>
+<!-- https://github.com/n5ro/aframe-physics-system/issues/187 -->
+    <script src="//cdn.jsdelivr.net/gh/donmccurdy/aframe-physics-system@v2.1.0/dist/aframe-physics-system.min.js"></script>
+  </head>
+  <body>
+    
+<!--     <script>
+  AFRAME.registerComponent('modify-materials', {
+    init: function () {
+      // Wait for model to load.
+      this.el.addEventListener('model-loaded', () => {
+        // Grab the mesh / scene.
+        const obj = this.el.getObject3D('mesh');
+        // Go over the submeshes and modify materials we want.
+        obj.traverse(node => {
+          if (node.name.indexOf('ship') !== -1) {
+            node.material.color.set('red');
+          }
+        });
+      });
+    }
+  });
+</script> -->
+<!--     <script>alert("hallo 3D wereld!"+ Math.random());</script>
+     -->
+<a-scene background="color: #ECECEC">
+  <a-assets>
+<!--      <a-asset-item id="triceratops"
+      src="https://cdn.glitch.global/ee370c23-8d82-4c43-98d0-b47e5e5150fe/ArmChair_01_4k.gltf?v=1649169126293"
+      response-type="arraybuffer" crossorigin="anonymous"></a-asset-item>     -->
+         <a-asset-item id="tafel"
+      src="https://joeyvanderbie.github.io/zorgtechnologieVR/CoffeeTable_01_4k.gltf"
+      response-type="arraybuffer" crossorigin="anonymous"></a-asset-item>    
+
+  </a-assets>
+  <a-entity gltf-model="#tafel" modify-materials position="0 0 -4"></a-entity>
+</a-scene>
+    
+<!--     <a-scene physics="debug: false"> -->
+      <!-- Player -->
+<!--       <a-entity camera look-controls></a-entity> -->
+<!--       <a-entity static-body="shape: sphere; sphereRadius: 0.02;" vive-controls="hand: left" sphere-collider="objects: .cube;" grab></a-entity>
+      <a-entity static-body="shape: sphere; sphereRadius: 0.02;" vive-controls="hand: right" sphere-collider="objects: .cube;" grab></a-entity> -->
+
+<!--       <a-box class="cube" dynamic-body position="0 0.25 -1" width="0.5" height="0.5" depth="0.5" color="red"></a-box>
+      <a-box class="cube" dynamic-body position="-1 0.25 -1" width="0.5" height="0.5" depth="0.5" color="green"></a-box>
+      <a-box class="cube" dynamic-body position="1 0.25 -1" width="0.5" height="0.5" depth="0.5" color="blue"></a-box> -->
+
+<!--         <a-assets>
+    <img id="platform" src="https://i.imgur.com/mYmmbrp.jpg">
+  </a-assets> -->
+
+<!--   <!-- Basic triangle. -->
+<!--   <a-triangle color="#CCC" vertex-c="1 -1 0"></a-triangle> -->
+
+  <!-- Textured triangle parallel to ground. -->
+<!--   <a-triangle src="#platform" position="-1 2 -3"  rotation="0 0 0"></a-triangle> --> 
+      
+      <!-- Terrain -->
+<!--       <a-ocean color="aqua" depth="100" width="100"></a-ocean> -->
+        <!--  position = "x(links/rechts) y(boven/onder)  z(voren/achter)" -->
+<!--       <a-box position="-1 2 -3" rotation="0 0 0" src="" color="#4CC3D9" static-body></a-box>
+      <a-box position="1 2 -3" rotation="0 0 0" src="" color="#4CC3D9" static-body></a-box>
+      <a-box position="0 2 -5" rotation="45 0 45 " src="" color="#4CC3D9" static-body></a-box> -->
+
+      
+<!--       <a-box position="-1 2 -3" rotation="0 45 0" src="#platform" color="#4CC3D9" static-body></a-box> -->
+<!--       <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" static-body></a-plane> -->
+<!--       <a-sky color="#ECECEC"></a-sky> -->
+<!--       <a-grid static-body></a-grid> -->
+
+      <!-- Lighting -->
+<!--       <a-entity light="type: point; color: #f4f4f4; intensity: 0.2; distance: 0" position="8 10 18"></a-entity>
+      <a-entity light="type: point; color: #f4f4f4; intensity: 0.6; distance: 0" position="-8 10 -18"></a-entity>
+      <a-entity light="type: ambient; color: #f4f4f4; intensity: 0.4;" position="-8 10 -18"></a-entity> -->
+<!--     </a-scene> -->
+  </body>
 </html>
